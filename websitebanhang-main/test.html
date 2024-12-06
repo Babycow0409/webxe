@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Store</title>
+
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="test.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+</head>
+
+<body>
+    <css-doodle grid="40">
+        :doodle {
+        grid-gap: 0px;
+        width: 2px;
+        height: 2px;
+        }
+        :container {
+        width:100vw;
+        height:100vh;
+        background:#020204;
+        }
+        :before{
+        content:'0';
+        animation-name: matrixdecode;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        color:#22b455;
+        text-shadow:0 0 2px #22b455;
+        }
+        @keyframes matrixdecode {
+        0%{
+        content:@round(@rand(0, 9));
+        opacity:@rand(0.5, 1);
+        }
+        10%{
+        content:@round(@rand(0, 9));
+        }
+        20%{
+        content:@round(@rand(0, 9));
+        }
+        30%{
+        content:@round(@rand(0, 9));
+        }
+        40%{
+        content:@round(@rand(0, 9));
+        }
+        50%{
+        content:@round(@rand(0, 9));
+        opacity:@rand(0.3, 1);
+        }
+        60%{
+        content:@round(@rand(0, 9));
+        }
+        70%{
+        content:@round(@rand(0, 9));
+        }
+        80%{
+        content:@round(@rand(0, 9));
+        }
+        90%{
+        content:@round(@rand(0, 9));
+        }
+        100%{
+        content:@round(@rand(0, 9));
+        opacity:@rand(0.3, 1);
+        }
+        }
+      </css-doodle>
+</body>
+
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="css/style-1.css">
+    <link rel="stylesheet" href="css/product.css">
+    <style>
+        .product-detail-image {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .product-info-section {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .product-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            color: #dc3545;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .product-description {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+
+        .product-details table {
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .product-details th {
+            width: 30%;
+            background-color: #f8f9fa;
+        }
+
+        .product-actions {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .quantity-input {
+            max-width: 150px;
+        }
+
+        .btn-primary, .btn-success {
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .product-detail-image {
+                height: 300px;
+            }
+            
+            .product-name {
+                font-size: 1.8rem;
+            }
+            
+            .product-price {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- --header-- -->
+    <div class="container-fluid header">
+        <div class="container-fluid fixed-top bg-light">
+
+            <nav class=" navbar  navbar-expand-lg">
+                <a href="index.html" class="navbar-brand">
+                    <div class="logo">
+                        <img src="./img/logo-z.png" alt="">
+                    </div>
+                </a>
+                <button class="navbar-toggler menu" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="fas fa-bars"></i>
+                    </span>
+                </button>
+                <div id="my-nav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto header-menu">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">TRANG CHỦ <span class="sr-only">(current)</span></a>
+                        </li>
+                        
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rollroyces.html" tabindex="-1" aria-disabled="true">Rollroyces</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="mercedes.html" tabindex="-1" aria-disabled="true">Mercedes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bentley.html" tabindex="-1" aria-disabled="true">Bentley</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Chevorlet.html" tabindex="-1" aria-disabled="true">Chevorlet</a>
+                        </li>
+
+
+                    </ul>
+                    <div class="mr-3 cart">
+                        <a href="#" onclick="checkLogin()">
+                            <i class="fas fa-user"></i>
+                        </a>
+
+
+                        <a class="ml-3 mr-3" href="./cart.html">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+
+                    </div>
+                    <div class="form-inline search">
+                        <input type="text" class="form-control" placeholder="Search..">
+                        <button type="submit" class="form-control btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
+
+    </div>
+
+    <!-- ---- -->
+
+
+    <!-- Nội dung chi tiết sản phẩm -->
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img id="product-image" src="" class="product-detail-image" alt="Ảnh sản phẩm">
+            </div>
+            <div class="col-md-6">
+                <div class="product-info-section">
+                    <h1 id="product-name" class="product-name"></h1>
+                    <div id="product-price" class="product-price"></div>
+                    
+                    <div class="product-description">
+                        <h4>Mô Tả Sản Phẩm</h4>
+                        <p id="product-description"></p>
+                    </div>
+                    
+                    <div class="product-details">
+                        <h4>Thông Số Kỹ Thuật</h4>
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th>Năm Sản Xuất</th>
+                                    <td id="product-year"></td>
+                                </tr>
+                                <tr>
+                                    <th>Màu Sắc</th>
+                                    <td id="product-colors"></td>
+                                </tr>
+                                <tr>
+                                    <th>Động Cơ</th>
+                                    <td id="product-engine"></td>
+                                </tr>
+                                <tr>
+                                    <th>Công Suất</th>
+                                    <td id="product-power"></td>
+                                </tr>
+                                <tr>
+                                    <th>Xuất Xứ</th>
+                                    <td id="product-origin"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <div class="form-group mb-3">
+                            <label for="quantity">Số Lượng</label>
+                            <input type="number" class="form-control quantity-input" id="quantity" value="1" min="1">
+                        </div>
+                        
+                        <div class="d-flex gap-3">
+                            <button id="add-to-cart" class="btn btn-primary">
+                                <i class="fas fa-shopping-cart"></i> Thêm Vào Giỏ Hàng
+                            </button>
+                            <button id="buy-now" class="btn btn-success">
+                                <i class="fas fa-credit-card"></i> Mua Ngay
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer tương tự như trang chính -->
+    <div class="container-fluid footer-3">
+        <!-- Giữ nguyên footer như trang index.html -->
+    </div>
+
+    <script>
+        // Function to load product details
+        function loadProductDetails() {
+            try {
+                const productJson = localStorage.getItem('selectedProduct');
+                if (!productJson) {
+                    throw new Error('Không tìm thấy thông tin sản phẩm');
+                }
+
+                const product = JSON.parse(productJson);
+                
+                // Update UI elements
+                document.getElementById('product-image').src = product.img;
+                document.getElementById('product-name').textContent = product.name;
+                document.getElementById('product-price').textContent = product.price;
+                document.getElementById('product-description').textContent = product.description;
+
+                // Update technical details
+                const details = product.details;
+                if (details) {
+                    document.getElementById('product-year').textContent = details.year;
+                    document.getElementById('product-colors').textContent = details.color.join(', ');
+                    document.getElementById('product-engine').textContent = 
+                        `${details.engine.type} ${details.engine.displacement} (${details.engine.configuration})`;
+                    document.getElementById('product-power').textContent = 
+                        `${details.performance.power} | ${details.performance.topSpeed} | ${details.performance.acceleration}`;
+                    document.getElementById('product-origin').textContent = details.origin;
+                }
+            } catch (error) {
+                console.error('Error loading product details:', error);
+                alert('Không thể tải thông tin sản phẩm. Vui lòng thử lại sau.');
+                window.location.href = 'mercedes.html';
+            }
+        }
+
+        // Gọi hàm khi trang được tải
+        document.addEventListener('DOMContentLoaded', loadProductDetails);
+
+        function addToCart(product, quantity) {
+            try {
+                let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                
+                // Check if product already exists in cart
+                const existingProductIndex = cart.findIndex(item => item.name === product.name);
+                
+                if (existingProductIndex !== -1) {
+                    // Update quantity if product exists
+                    cart[existingProductIndex].quantity += quantity;
+                } else {
+                    // Add new product to cart
+                    cart.push({
+                        name: product.name,
+                        price: product.price,
+                        img: product.img,
+                        quantity: quantity
+                    });
+                }
+                
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert('Sản phẩm đã được thêm vào giỏ hàng!');
+            } catch (e) {
+                console.error('Failed to add to cart:', e);
+                alert('Có lỗi xảy ra khi thêm vào giỏ hàng');
+            }
+        }
+
+        function buyNow(product, quantity) {
+            try {
+                // Add to cart first
+                addToCart(product, quantity);
+                // Redirect to cart page
+                window.location.href = 'cart.html';
+            } catch (e) {
+                console.error('Failed to process buy now:', e);
+                alert('Có lỗi xảy ra khi xử lý mua ngay');
+            }
+        }
+
+        // Validate quantity input
+        document.getElementById('quantity').addEventListener('change', function() {
+            if (this.value < 1) {
+                this.value = 1;
+            }
+        });
+    </script>
+</body>
+</html>

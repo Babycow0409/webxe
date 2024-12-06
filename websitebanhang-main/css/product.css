@@ -1,0 +1,89 @@
+/* Header Styles */
+.navbar {
+  padding: 10px 0;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand .logo img {
+  max-height: 50px;
+  object-fit: contain;
+}
+
+.nav-item .nav-link {
+  color: #333;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-item .nav-link:hover {
+  color: #007bff;
+}
+
+.form-inline .form-control {
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.form-inline .btn-outline-secondary {
+  border-radius: 20px;
+  color: #007bff;
+  border-color: #007bff;
+  transition: all 0.3s ease;
+}
+
+.form-inline .btn-outline-secondary:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Footer Styles */
+.footer-3 {
+  background-color: #f8f9fa;
+  padding: 50px 0;
+  color: #333;
+}
+
+.footer-3 .h6 {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-3 .link-support ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-3 .link-support ul li {
+  margin-bottom: 10px;
+}
+
+.footer-3 .link-support ul li a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-3 .link-support ul li a:hover {
+  color: #007bff;
+}
+
+.footer-3 .text {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+      background-color: #fff;
+      padding: 15px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .nav-item {
+      margin: 10px 0;
+  }
+}

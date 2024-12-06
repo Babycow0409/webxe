@@ -1,0 +1,180 @@
+*{
+    font-size: 14px;
+}
+
+.cc{
+  width: 200px;
+  height: 200px;
+  background: darkblue;
+  transition: all 2s;
+}
+.cc:hover{
+  width: 150%;
+}
+/* header */
+
+.logo img{
+  width: 100%;
+}
+.menu ul li a{
+  color: rgb(224, 221, 221)!important;
+  font-size: 120%;
+}
+.menu ul li:hover a{
+  border-bottom:0.5px rgb(255, 217, 0) solid ;
+}
+.search{
+  float: left;
+}
+   .cart{
+    /* position: relative!important; */
+    margin-top: -3.5%;
+    margin-left: 90%;
+      }
+ 
+body {
+    padding-top: 0px;
+  }
+  
+  .show-cart li {
+    display: flex;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .card-img-top {
+    width: 200px;
+    height: 200px;
+    align-self: center;
+  }
+
+  .menu-web{
+      position: relative;
+      margin-top: 10%;
+      margin-left: -22%;
+  }
+  .menu-web ul li a{
+    font-size: 120%!important;
+    color: rgb(223, 176, 23)!important;
+  }
+
+  .menu-web{
+      margin-left: 7%;
+  }
+
+  .product{
+padding: 5px;
+border: 1px white double!important;
+
+/* border-radius: 16px!important; */
+background: rgba(0, 0, 0, 0.8)!important;
+  }
+  .product:hover{
+border: 1px rgb(255, 7, 7) double!important;
+
+
+  }
+
+
+
+
+.price{
+    color: rgb(255, 255, 255);
+}
+
+.product-title{
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+.add-cart{
+ 
+    width: 50px;
+    text-align: center;
+ 
+    cursor: pointer;
+    margin: 0 auto;
+    transition: all 1s!important;
+}
+.add-cart:hover{
+  width: 90%;
+
+}
+
+.add-cart a{
+  font-size: 105%;
+  font-weight: 400;
+  color: white!important;
+  transition: all 1s!important;
+
+}
+
+.add-cart:hover a{
+  
+  color: rgb(201, 4, 4)!important;
+}
+.news-product{
+  border-radius: 10px;
+  padding: 8px!important;
+  /* background: rgb(139, 102, 34); */
+  color: rgb(255, 255, 255);
+}
+.news-product i{
+  font-size: 200%;
+}
+.footer{
+    background: rgb(53, 51, 51);
+    padding: 2rem;
+    color: white;
+}
+.footer-2{
+    background: rgb(71, 71, 71);
+    padding: 2rem;
+    color: white;
+   
+}
+
+.contact{
+    border-bottom:2px white solid ;
+    padding-bottom: 0.2%;
+}
+
+
+
+/* ---------cart----- */
+.price-all{
+  color: orange;
+  font-size: 150%!important;
+}
+.price-all span{
+  /* color: orange; */
+  font-size: 100%;
+}
+.name-title{
+  font-size: 120%;
+  font-weight: 300;
+}
+.name-title:hover{
+  font-size: 120%;
+  font-weight: 300;
+  color: red;
+}
+
+.thanhtoan{
+  /* background: darkcyan!important; */
+  border: rgb(128, 128, 128) 2px solid;
+  width: 200px;
+  background: firebrick!important;
+  height: auto;
+  position: fixed;
+}
+.thanhtoan button{
+  width: 100%;
+}
+
+.modal-success{
+  height: 400px;
+}

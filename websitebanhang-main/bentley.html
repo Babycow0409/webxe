@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rollroyces</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style-1.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css" />
+    <link rel="stylesheet" href="css/product.css">
+    <style>
+        .product-grid {
+            margin-top: 100px;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #fff;
+            transition: box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .product-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+        }
+        .product-pricing {
+            font-size: 1rem;
+            color: #dc3545;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="container-fluid fixed-top bg-light">
+        <nav class="navbar navbar-expand-lg">
+            <a href="index.html" class="navbar-brand">
+                <div class="logo">
+                    <img src="./img/logo-z.png" alt="Logo" />
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="rollroyces.html">Rolls Royce</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mercedes.html">Mercedes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bentley.html">Bentley</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Chevorlet.html">Chevorlet</a></li>
+                </ul>
+                <div class="form-inline">
+                    <input type="text" class="form-control mr-2" placeholder="Search..">
+                    <button class="btn btn-outline-secondary">Search</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Product Grid -->
+    <div class="container product-grid">
+        <div class="row">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </div>
+     <!-- --footer-- -->
+     <div class="container-fluid">
+
+        <!-- --thongtin-- -->
+        <div class="container info">
+
+            <div class="row mt-5 mb-5">
+                <div class="col-3 info-col">
+                    <div class="h6">
+                        GỌI MUA HÀNG(8:30 - 17:00)
+                    </div>
+                    <a href="tel:0395342134">
+
+                        <i class="fas fa-phone-alt"></i>
+                        033 892 7972
+                    </a>
+
+                    <div class="info-foot">Tất cả các ngày trong tuần</div>
+                </div>
+                <div class="col-3 info-col">
+                    <div class="h6">GỌI MUA HÀNG(8:30 - 17:00) </div>
+
+                    <a href="tel:0395342134">
+                        <i class="fas fa-phone-alt"></i>
+                        033 892 7972
+                    </a>
+
+                    <div class="info-foot">Tất cả các ngày trong tuần</div>
+                </div>
+
+                <div class="col-3">
+                    <div class="h6">ĐĂNG KÍ NHẬN THÔNG TIN MỚI</div>
+                    <form action="" class="form-inline">
+                        <input type="text" class="form-control" style="width: 60%;">
+                        <a href="" class=" btn btn-outline-dark">Đăng kí</a>
+                    </form>
+                </div>
+                <div class="col-3 info-social">
+                    <div class="h6">THEO DÕI CHÚNG TÔI</div>
+                    <div class="row">
+                        <div class="col-3">
+                            <a href="">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                        <div class="col-3">
+                            <a href="">
+                                <i class="fab fa-twitter"></i>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="mr-3 cart">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="userDropdown">
+                    <i class="fas fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                    <a class="dropdown-item" href="user/auth.html" id="loginBtn">Đăng nhập</a>
+                    <a class="dropdown-item" href="user/profile.html" id="profileBtn" style="display: none;">Thông tin cá nhân</a>
+                    <a class="dropdown-item" href="admin/trangchu.html" id="adminBtn" style="display: none;">Quản trị</a>
+                    <a class="dropdown-item" href="#" id="logoutBtn" style="display: none;" onclick="logout()">Đăng xuất</a>
+                </div>
+            </div>
+            <a class="ml-3 mr-3" href="./cart.html">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+        <!-- ---- -->
+        <!-- --footer-- -->
+        <div class="container-fluid footer-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 link-support">
+                        <div class="h6">HỖ TRỢ KHÁCH HÀNG</div>
+                        <ul>
+                            <li>
+                                <a href="">Hướng dẫn mua hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách đổi/trả</a>
+                            </li>
+                            <li>
+                                <a href="">Hình thức thanh toán</a>
+                            </li>
+                            <li>
+                                <a href="">Chính sách giao hàng</a>
+                            </li>
+                            <li>
+                                <a href="">Thông tin bảo mật</a>
+                            </li>
+                            <li>
+                                <a href="">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 link-support">
+                        <div class="h6">HỆ THỐNG CỬA HÀNG</div>
+                        <ul>
+                            <li>
+                                Zero Shop
+                            </li>
+                            <li class="text">
+                                Địa chỉ: Chung Cư Đông Hải, Tô Ký, Tân Chánh Hiệp, Quận 12  
+                            </li>
+                            <li>
+                                Phone : 033 892 7972
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-3 link-support">
+                        <div class="h6">VỀ CHÚNG TÔI</div>
+                        <div class="text">Với hơn 20 cửa hàng trải dài cả nước, Germe hy vọng sẽ mang đến sự phục vụ chu
+                            đáo cho tất
+                            cả các khách hàng. Hệ thống cửa hàng thời trang Germe luôn luôn lắng nghe những ý kiến đóng
+                            góp từ các khách hàng với mục tiêu đẩy mạnh dịch vụ, mở rộng hệ thống và làm hài lòng những
+                            vị khách đến trên toàn quốc.</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="h6">FANPAGE CHÚNG TÔI</div>
+                        <div class="fb-page" data-href="https://www.facebook.com/motplus/" data-tabs="timeline"
+                            data-width="360" data-height="200" data-small-header="false"
+                            data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                            <blockquote cite="https://www.facebook.com/motplus/" class="fb-xfbml-parse-ignore"><a
+                                    href="https://www.facebook.com/motplus/">Mọt +</a></blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ---- -->
+    </div>
+    <!-- ---- -->
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        const products = [
+            {
+                name: 'Bentley S2 Continental Flying Spur',
+                price: '250.000 USD',
+                img: 'https://images-cdn.auctionmobility.com/is3/auctionmobility-static/lVr5-1-NERL3//106.jpg',
+                details: {
+                    year: '1959-1962',
+                    color: ['trắng,đen'],
+                    engine: {
+                        type: 'V8',
+                        displacement: '6.2L',
+                        configuration: 'NA (Naturally Aspirated)'
+                    },
+                    performance: {
+                        power: '165 HP',
+                        topSpeed: '180 km/h',
+                        acceleration: '0-100 km/h in 10.5s'
+                    },
+                    origin: 'United Kingdom',
+                    transmission: '4-speed automatic',
+                    weight: '2,032 kg'
+                }
+            },
+            {
+                name: 'Bentley T1',
+                price: '300.000 USD',
+                img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Bentley_T-1.JPG/280px-Bentley_T-1.JPG',
+                details: {
+                    year: '1965-1977',
+                    color: ['đen,bạc'],
+                    engine: {
+                        type: 'V8',
+                        displacement: '6.75L',
+                        configuration: 'NA'
+                    },
+                    performance: {
+                        power: '175 HP',
+                        topSpeed: '190 km/h',
+                        acceleration: '0-100 km/h in 11s'
+                    },
+                    origin: 'United Kingdom',
+                    transmission: '3-speed automatic',
+                    weight: '2,115 kg'
+                }
+            },
+            {
+                name: 'Bentley Turbo R',
+                price: '550.000 USD',
+                img: 'https://prestigeandperformancecar.com/wp-content/uploads/Turbo-R-2-900x563.jpg.webp',
+                details: {
+                    year: '1985-1999',
+                    color: ['bạc', 'xanh', 'đỏ', ],
+                    engine: {
+                        type: 'V8',
+                        displacement: '6.75L',
+                        configuration: 'Turbocharged'
+                    },
+                    performance: {
+                        power: '300 HP',
+                        topSpeed: '225 km/h',
+                        acceleration: '0-100 km/h in 6.6s'
+                    },
+                    origin: 'United Kingdom',
+                    transmission: '4-speed automatic',
+                    weight: '2,450 kg'
+                }
+            },
+            {
+                name: ' Bentley Azure',
+                price: '2 triệu USD',
+                img: 'https://www.edmunds.com/assets/m/bentley/azure/2007/oem/2007_bentley_azure_convertible_base_fq_oem_3_815.jpg',
+                details: {
+                    year: '1995-2003',
+                    color: ['xanh','trắng','bạc'],
+                    engine: {
+                        type: 'V8',
+                        displacement: '6.75L',
+                        configuration: 'Turbocharged'
+                    },
+                    performance: {
+                        power: '385 HP',
+                        topSpeed: '240 km/h',
+                        acceleration: '0-100 km/h 6.3s'
+                    },
+                    origin: 'United Kingdom',
+                    transmission: '4-speed automatic',
+                    weight: '2,450 kg'
+                }
+            }
+        ];
+
+        function renderProducts() {
+            const productGrid = document.querySelector('.product-grid .row');
+            productGrid.innerHTML = products.map(product => {
+                const productJSON = encodeURIComponent(JSON.stringify(product));
+                
+                return `
+                    <div class="col-md-3">
+                        <div class="product-card">
+                            <div class="product-image">
+                                <a href="#" onclick="handleProductClick(event, JSON.parse(decodeURIComponent('${productJSON}')))">
+                                    <img src="${product.img}" 
+                                        alt="${product.name}" 
+                                        onerror="this.onerror=null; this.src='path/to/local/backup-image.jpg';">
+                                </a>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">${product.name}</div>
+                                <div class="product-pricing">${product.price}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function handleProductClick(event, product) {
+            event.preventDefault();
+            try {
+                product.description = `${product.name} là một trong những mẫu xe hơi cổ điển đáng chú ý nhất của Bentley , được sản xuất vào năm ${product.details.year}. Xe được trang bị động cơ ${product.details.engine.type} ${product.details.engine.displacement} mạnh mẽ, có khả năng đạt công suất ${product.details.performance.power}.`;
+                
+                localStorage.setItem('selectedProduct', JSON.stringify(product));
+                window.location.href = 'product-detail.html';
+            } catch (e) {
+                console.error('Failed to save product details:', e);
+                alert('Có lỗi xảy ra. Vui lòng thử lại.');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', renderProducts);
+    </script>
+</body>
+</html>

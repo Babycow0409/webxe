@@ -1,0 +1,23 @@
+input {
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+
+
+.test{
+    display: none;
+
+    width: 500px;
+    height: 400px;
+    background: gold;
+    transition: all 2s;
+
+}
+.menu:hover .test{
+    width: 700px;
+    display: block;
+    /* transition: all 2s; */
+
+}
